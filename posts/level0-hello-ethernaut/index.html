@@ -215,18 +215,18 @@ Jika terjadi error seperti berikut ini, coba import account menggunakan private 
 <blockquote>
 <p>Jika terjadi error seperti berikut ini, coba import account menggunakan private key lain dan jangan lupa di connect an ke site nya
 <figure class="align-center ">
-    <img loading="lazy" src="/ardias/images/20230818/error1.png#center"/> 
+    <img loading="lazy" src="/ardiaswx/images/20230818/error1.png#center"/> 
 </figure>
 </p>
 </blockquote>
 <p>Setelah klik <code>Get new instance</code> maka tampilan nya akan berubah dan akan ada button <code>Submit instance</code>.
 <figure class="align-center ">
-    <img loading="lazy" src="/ardias/images/20230818/submit-instance.png#center"/> 
+    <img loading="lazy" src="/ardiaswx/images/20230818/submit-instance.png#center"/> 
 </figure>
 </p>
 <p>Kalau kita buka console dan ketikkan <code>ethernaut</code> lalu muncul object seperti berikut maka instance berhasil di buat
 <figure class="align-center ">
-    <img loading="lazy" src="/ardias/images/20230818/object.png#center"/> 
+    <img loading="lazy" src="/ardiaswx/images/20230818/object.png#center"/> 
 </figure>
 </p>
 <blockquote>
@@ -236,67 +236,67 @@ Jika terjadi error seperti berikut ini, coba import account menggunakan private 
 </span></span></span></code></pre></div></blockquote>
 <p>Lalu bagaimana untuk menyelesaikan level ini? Jadi jika kita perhatikan pada nomor 9 untuk berinteraksinya kita perlu mengetikkan method <code>await contract.info()</code> untuk menyelesaikan level ini.</p>
 <figure class="align-center ">
-    <img loading="lazy" src="/ardias/images/20230818/info.png#center"/> 
+    <img loading="lazy" src="/ardiaswx/images/20230818/info.png#center"/> 
 </figure>
 
 <p>Setelah menjalankan info ternyata diberi tahu kembali bahwa kita perlu mencari tahu di <code>info1()</code>. Pada <code>info1()</code> kita diberi tahu kembali bahwa disuruh mencoba <code>info2()</code> tetapi kita memerlukan parameter <code>&quot;hello&quot;</code></p>
 <figure class="align-center ">
-    <img loading="lazy" src="/ardias/images/20230818/info1.png#center"/> 
+    <img loading="lazy" src="/ardiaswx/images/20230818/info1.png#center"/> 
 </figure>
 
 <p>Selanjutnya kita diberitahu bahwa terdapat property <code>infoNum</code> yang terdapat angka untuk <code>info</code> selanjutnya</p>
 <figure class="align-center ">
-    <img loading="lazy" src="/ardias/images/20230818/infonum.png#center"/> 
+    <img loading="lazy" src="/ardiaswx/images/20230818/infonum.png#center"/> 
 </figure>
 
 <p>Kita mendapatkan angka untuk mengakses <code>info</code> selanjutnya yaitu <code>info42</code></p>
 <figure class="align-center ">
-    <img loading="lazy" src="/ardias/images/20230818/info42.png#center"/> 
+    <img loading="lazy" src="/ardiaswx/images/20230818/info42.png#center"/> 
 </figure>
 
 <p>Dari <code>info42</code> ini kita dapat informasi lagi bahwa selanjutnya ada di method <code>theMethodName()</code></p>
 <figure class="align-center ">
-    <img loading="lazy" src="/ardias/images/20230818/themethod.png#center"/> 
+    <img loading="lazy" src="/ardiaswx/images/20230818/themethod.png#center"/> 
 </figure>
 
 <p>Disini kita mendapatkan method name lagi yaitu <code>method7123949()</code></p>
 <figure class="align-center ">
-    <img loading="lazy" src="/ardias/images/20230818/method7123949.png#center"/> 
+    <img loading="lazy" src="/ardiaswx/images/20230818/method7123949.png#center"/> 
 </figure>
 
 <p>Selanjutnya kita perlu mencari tahu password untuk di submit ke function<code>authenticate()</code></p>
 <figure class="align-center ">
-    <img loading="lazy" src="/ardias/images/20230818/pass-authenticate.png#center"/> 
+    <img loading="lazy" src="/ardiaswx/images/20230818/pass-authenticate.png#center"/> 
 </figure>
 
 <p>Jika kita perhatikan <code>abi</code> yang ada di contract dengan mengetikkan <code>contract</code> terdapat sebuah function menarik yaitu <code>password</code></p>
 <figure class="align-center ">
-    <img loading="lazy" src="/ardias/images/20230818/contract-pass.png#center"/> 
+    <img loading="lazy" src="/ardiaswx/images/20230818/contract-pass.png#center"/> 
 </figure>
 
 <p>Setelah kita coba jalankan, kita mendapatkan password yaitu <code>ethernaut0</code></p>
 <figure class="align-center ">
-    <img loading="lazy" src="/ardias/images/20230818/pass.png#center"/> 
+    <img loading="lazy" src="/ardiaswx/images/20230818/pass.png#center"/> 
 </figure>
 
 <p>Langsung saja kita selesaikan levelnya dengan memasukkan ke parameter function <code>authenticate()</code></p>
 <figure class="align-center ">
-    <img loading="lazy" src="/ardias/images/20230818/auth.png#center"/> 
+    <img loading="lazy" src="/ardiaswx/images/20230818/auth.png#center"/> 
 </figure>
 
 <p>Nanti akan muncul sebuah popup Metamask lagi untuk Confirm transaksi dan jika berhasil pada console seperti berikut</p>
 <figure class="align-center ">
-    <img loading="lazy" src="/ardias/images/20230818/confirm.png#center"/> 
+    <img loading="lazy" src="/ardiaswx/images/20230818/confirm.png#center"/> 
 </figure>
 
 <p>Untuk cek apakah level 0 sudah clear bisa ketikkan</p>
 <figure class="align-center ">
-    <img loading="lazy" src="/ardias/images/20230818/check.png#center"/> 
+    <img loading="lazy" src="/ardiaswx/images/20230818/check.png#center"/> 
 </figure>
 
 <p>Dan pada tampilan klik button <code>Submit Instance</code>, setelah itu akan muncul popup confirm lagi. Tampilan akan menunjukkan Congratulations dan nanti akan muncul smart contract yang digunakan pada level ini</p>
 <figure class="align-center ">
-    <img loading="lazy" src="/ardias/images/20230818/submit.png#center"/> 
+    <img loading="lazy" src="/ardiaswx/images/20230818/submit.png#center"/> 
 </figure>
 
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT

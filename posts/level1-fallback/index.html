@@ -323,7 +323,7 @@ Pada level kali ini tidak seperti sebelumnya kita langsung diberikan sebuah sour
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span>await <span style="color:#66d9ef">contract</span>.owner()
 </span></span></code></pre></div><p>Dan kita lihat bahwa address owner contract sekarang adalah <code>0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6</code></p>
 <figure class="align-center ">
-    <img loading="lazy" src="/ardias/images/20230818/owner.png#center"/> <figcaption>
+    <img loading="lazy" src="/ardiaswx/images/20230818/owner.png#center"/> <figcaption>
             Initial Owner Address
         </figcaption>
 </figure>
@@ -333,7 +333,7 @@ Pada level kali ini tidak seperti sebelumnya kita langsung diberikan sebuah sour
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span>await <span style="color:#66d9ef">contract</span>.contribute({ value<span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span> })
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// untuk value gunakan saja yang terendah, seperti diatas yaitu hanya 1 wei
 </span></span></span></code></pre></div><figure class="align-center ">
-    <img loading="lazy" src="/ardias/images/20230818/contribute.png#center"/> <figcaption>
+    <img loading="lazy" src="/ardiaswx/images/20230818/contribute.png#center"/> <figcaption>
             Running await contract.contribute() in console
         </figcaption>
 </figure>
@@ -341,7 +341,7 @@ Pada level kali ini tidak seperti sebelumnya kita langsung diberikan sebuah sour
 <p>Lalu kita cek dahulu apakah contribution kita sudah masuk atau belum dengan menjalankan perintah berikut</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span>await <span style="color:#66d9ef">contract</span>.getContribution().then(v <span style="color:#f92672">=&gt;</span> v.toString())
 </span></span></code></pre></div><figure class="align-center ">
-    <img loading="lazy" src="/ardias/images/20230818/getcontribution.png#center"/> <figcaption>
+    <img loading="lazy" src="/ardiaswx/images/20230818/getcontribution.png#center"/> <figcaption>
             Running await contract.getContribution() in console
         </figcaption>
 </figure>
@@ -349,14 +349,14 @@ Pada level kali ini tidak seperti sebelumnya kita langsung diberikan sebuah sour
 <p>Selanjutnya, untuk melakukan interaksi langsung ke <code>fallback</code> atau <code>receive</code> kita bisa menjalankan perintah berikut ini dan akan muncul popup metamask seperti biasa untuk konfirmasi</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span>await <span style="color:#66d9ef">contract</span>.sendTransaction({ <span style="color:#66d9ef">from</span><span style="color:#f92672">:</span> player, value<span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span> })
 </span></span></code></pre></div><figure class="align-center ">
-    <img loading="lazy" src="/ardias/images/20230818/sendtransac.png#center"/> <figcaption>
+    <img loading="lazy" src="/ardiaswx/images/20230818/sendtransac.png#center"/> <figcaption>
             Running await contract.sendTransaction() in console
         </figcaption>
 </figure>
 
 <p>Sekarang jika kita lihat owner contractnya sudah berubah sesuai dengan address yang kita miliiki</p>
 <figure class="align-center ">
-    <img loading="lazy" src="/ardias/images/20230818/owner-final.png#center"/> <figcaption>
+    <img loading="lazy" src="/ardiaswx/images/20230818/owner-final.png#center"/> <figcaption>
             Owner contract address changed to our address
         </figcaption>
 </figure>
@@ -364,7 +364,7 @@ Pada level kali ini tidak seperti sebelumnya kita langsung diberikan sebuah sour
 <p>Langkah terakhir adalah melakukan withdraw dengan menjalankan perintah berikut ini dan kalian bisa lihat balance kalian bertambah</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span>await <span style="color:#66d9ef">contract</span>.withdraw()
 </span></span></code></pre></div><figure class="align-center ">
-    <img loading="lazy" src="/ardias/images/20230818/withdraw.png#center"/> <figcaption>
+    <img loading="lazy" src="/ardiaswx/images/20230818/withdraw.png#center"/> <figcaption>
             Running await contract.withdraw() in console
         </figcaption>
 </figure>
