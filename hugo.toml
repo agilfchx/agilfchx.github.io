@@ -2,3 +2,60 @@ baseURL = 'https://agilfchx.github.io/ardias'
 languageCode = 'en-us'
 title = 'Ardias'
 theme = 'PaperMod'
+
+[params]
+    author = "Ardias"
+    defaultTheme = "Dark"
+    disableThemeToggle = false
+    ShowReadingTime = true
+    ShowBreadCrumbs = true
+
+    [params.profileMode]
+        enabled = true
+        title = "Ardias"
+        subtitle = "Ordinary People"
+        imageUrl = "images/batman.jpg"
+        imageWidth = 200
+        imageHeight = 200
+
+    [[params.profileMode.buttons]]
+        name = "Looking for my posts?"
+        url = "posts"
+    
+    [params.label]
+        text = "Ardias"
+        icon = "logo.png"
+        iconHeight = 35
+
+    [[params.socialIcons]]
+        name = "linkedin"
+        url = "https://linkedin.com/in/agilfchx/"
+    
+    [[params.socialIcons]]
+        name = "medium"
+        url = "https://ardiasx.medium.com"
+
+    [[params.socialIcons]]
+        name = "github"
+        url = "https://github.com/agilfchx/"
+
+    [[params.socialIcons]]
+        name = "steam"
+        url = "https://steamcommunity.com/id/ardiasmf"
+
+[[menu.main]]
+    name = "Posts"
+    url = "/posts"
+    weight = 10
+
+[[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    weight = 20
+
+[[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 30
