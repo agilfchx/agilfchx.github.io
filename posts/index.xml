@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Ardias</title>
+    <link>https://agilfchx.github.io/ardiasx/posts/</link>
+    <description>Recent content in Posts on Ardias</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 18 Aug 2023 23:14:53 +0700</lastBuildDate><atom:link href="https://agilfchx.github.io/ardiasx/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Level 1 - Fallback</title>
+      <link>https://agilfchx.github.io/ardiasx/posts/level1-fallback/</link>
+      <pubDate>Fri, 18 Aug 2023 23:14:53 +0700</pubDate>
+      
+      <guid>https://agilfchx.github.io/ardiasx/posts/level1-fallback/</guid>
+      <description>Hello Readers!
+Kita akan melanjutkan series Ethernaut ini dan kita akan bermain di level 1 yaitu Fallback
+Pada level kali ini tidak seperti sebelumnya kita langsung diberikan sebuah source code smart contract nya untuk menyelesaikan level ini, berikut adalah source codenya
+// SPDX-License-Identifier: MIT pragma solidity ^0.8.0; contract Fallback { mapping(address =&amp;gt; uint) public contributions; address public owner; constructor() { owner = msg.sender; contributions[msg.sender] = 1000 * (1 ether); } modifier onlyOwner { require( msg.</description>
+    </item>
+    
+    <item>
+      <title>Level 0 - Hello Ethernaut</title>
+      <link>https://agilfchx.github.io/ardiasx/posts/level0-hello-ethernaut/</link>
+      <pubDate>Fri, 18 Aug 2023 23:14:44 +0700</pubDate>
+      
+      <guid>https://agilfchx.github.io/ardiasx/posts/level0-hello-ethernaut/</guid>
+      <description>Hee ya 👋
+Pada post kali ini saya akan memulai dari Level 0 yaitu Hello Ethernaut
+Di level ini kita akan diberitahu bagaimana cara bermain di Ethernaut, tanpa panjang lebar mari kita mulai saja
+Start Untuk memulai kita klik Get new instance terlebih dahulu untuk memulai level ini. Nanti akan muncul sebuah pop up confirm transaction dari Metamask dan itu bisa langsung saja klik Confirm.
+Jika terjadi error seperti berikut ini, coba import account menggunakan private key lain dan jangan lupa di connect an ke site nya Setelah klik Get new instance maka tampilan nya akan berubah dan akan ada button Submit instance.</description>
+    </item>
+    
+    <item>
+      <title>Setup Ethernaut</title>
+      <link>https://agilfchx.github.io/ardiasx/posts/setup-ethernaut/</link>
+      <pubDate>Fri, 18 Aug 2023 23:14:30 +0700</pubDate>
+      
+      <guid>https://agilfchx.github.io/ardiasx/posts/setup-ethernaut/</guid>
+      <description>Halo semuanya, jadi pada post pertama ini saya akan membagikan cara untuk setup Ethernaut secara lokal (Linux).
+Jadi sebelum kita melakukan setup, saya akan membagikan beberapa versi tools dan software yang saya gunakan untuk bermain di Ethernaut yang dapat berjalan di lokal saya yaitu:
+Node.js v18.17.1 NPM v9.8.1 yarn git Steps Clone repo dan install dependencies git clone https://github.com/OpenZeppelin/ethernaut.git &amp;amp;&amp;amp; yarn install Setelah terinstall, jalankan ganache atau rpc servernya pada folder ethernaut yarn network Lanjut kita akan melakukan installasi Metamask sesuai browser yang digunakan Setelah Metamask terinstall, selanjutnya kita akan menambahkan network baru dengan klik pada bagian pojok kiri atas lalu klik Add Network dan setelah di klik pilih Add Network Manually Isi kolom yang kosong menjadi seperti berikut dan untuk Network name bebas diisi sesuai kemauan kalian Setelah itu kita akan memasukkan akun yang dari Ganache, jadi kita memerlukan private key yang ada pada output Ganache di terminal Untuk Import Account yang ada di Ganache ini kita bisa klik Account 1 atau yang bagian atas yang paling tengah, lalu akan nanti akan muncul sebuah poppup dan pilih Import account Masukkan private key yang sudah di copy dari Ganache ke kolom berikut ini, lalu Import Tampilan jika berhasil melakukan import account</description>
+    </item>
+    
+  </channel>
+</rss>

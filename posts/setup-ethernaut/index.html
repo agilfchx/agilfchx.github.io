@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Setup Ethernaut | Ardias</title>
+<meta name="keywords" content="Ethernaut">
+<meta name="description" content="Halo semuanya, jadi pada post pertama ini saya akan membagikan cara untuk setup Ethernaut secara lokal (Linux).
+Jadi sebelum kita melakukan setup, saya akan membagikan beberapa versi tools dan software yang saya gunakan untuk bermain di Ethernaut yang dapat berjalan di lokal saya yaitu:
+Node.js v18.17.1 NPM v9.8.1 yarn git Steps Clone repo dan install dependencies git clone https://github.com/OpenZeppelin/ethernaut.git &amp;&amp; yarn install Setelah terinstall, jalankan ganache atau rpc servernya pada folder ethernaut yarn network Lanjut kita akan melakukan installasi Metamask sesuai browser yang digunakan Setelah Metamask terinstall, selanjutnya kita akan menambahkan network baru dengan klik pada bagian pojok kiri atas lalu klik Add Network dan setelah di klik pilih Add Network Manually Isi kolom yang kosong menjadi seperti berikut dan untuk Network name bebas diisi sesuai kemauan kalian Setelah itu kita akan memasukkan akun yang dari Ganache, jadi kita memerlukan private key yang ada pada output Ganache di terminal Untuk Import Account yang ada di Ganache ini kita bisa klik Account 1 atau yang bagian atas yang paling tengah, lalu akan nanti akan muncul sebuah poppup dan pilih Import account Masukkan private key yang sudah di copy dari Ganache ke kolom berikut ini, lalu Import Tampilan jika berhasil melakukan import account">
+<meta name="author" content="Ardias">
+<link rel="canonical" href="https://agilfchx.github.io/ardiasx/posts/setup-ethernaut/">
+<link crossorigin="anonymous" href="/ardiasx/assets/css/stylesheet.5cfc680b1eeaeef9efbced92d46c2a9e876b72ee14fba85846afc4cff9e6e6f8.css" integrity="sha256-XPxoCx7q7vnvvO2S1Gwqnodrcu4U&#43;6hYRq/Ez/nm5vg=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/ardiasx/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://agilfchx.github.io/ardiasx/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://agilfchx.github.io/ardiasx/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://agilfchx.github.io/ardiasx/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://agilfchx.github.io/ardiasx/apple-touch-icon.png">
+<link rel="mask-icon" href="https://agilfchx.github.io/ardiasx/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Setup Ethernaut" />
+<meta property="og:description" content="Halo semuanya, jadi pada post pertama ini saya akan membagikan cara untuk setup Ethernaut secara lokal (Linux).
+Jadi sebelum kita melakukan setup, saya akan membagikan beberapa versi tools dan software yang saya gunakan untuk bermain di Ethernaut yang dapat berjalan di lokal saya yaitu:
+Node.js v18.17.1 NPM v9.8.1 yarn git Steps Clone repo dan install dependencies git clone https://github.com/OpenZeppelin/ethernaut.git &amp;&amp; yarn install Setelah terinstall, jalankan ganache atau rpc servernya pada folder ethernaut yarn network Lanjut kita akan melakukan installasi Metamask sesuai browser yang digunakan Setelah Metamask terinstall, selanjutnya kita akan menambahkan network baru dengan klik pada bagian pojok kiri atas lalu klik Add Network dan setelah di klik pilih Add Network Manually Isi kolom yang kosong menjadi seperti berikut dan untuk Network name bebas diisi sesuai kemauan kalian Setelah itu kita akan memasukkan akun yang dari Ganache, jadi kita memerlukan private key yang ada pada output Ganache di terminal Untuk Import Account yang ada di Ganache ini kita bisa klik Account 1 atau yang bagian atas yang paling tengah, lalu akan nanti akan muncul sebuah poppup dan pilih Import account Masukkan private key yang sudah di copy dari Ganache ke kolom berikut ini, lalu Import Tampilan jika berhasil melakukan import account" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://agilfchx.github.io/ardiasx/posts/setup-ethernaut/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-08-18T23:14:30+07:00" />
+<meta property="article:modified_time" content="2023-08-18T23:14:30+07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Setup Ethernaut"/>
+<meta name="twitter:description" content="Halo semuanya, jadi pada post pertama ini saya akan membagikan cara untuk setup Ethernaut secara lokal (Linux).
+Jadi sebelum kita melakukan setup, saya akan membagikan beberapa versi tools dan software yang saya gunakan untuk bermain di Ethernaut yang dapat berjalan di lokal saya yaitu:
+Node.js v18.17.1 NPM v9.8.1 yarn git Steps Clone repo dan install dependencies git clone https://github.com/OpenZeppelin/ethernaut.git &amp;&amp; yarn install Setelah terinstall, jalankan ganache atau rpc servernya pada folder ethernaut yarn network Lanjut kita akan melakukan installasi Metamask sesuai browser yang digunakan Setelah Metamask terinstall, selanjutnya kita akan menambahkan network baru dengan klik pada bagian pojok kiri atas lalu klik Add Network dan setelah di klik pilih Add Network Manually Isi kolom yang kosong menjadi seperti berikut dan untuk Network name bebas diisi sesuai kemauan kalian Setelah itu kita akan memasukkan akun yang dari Ganache, jadi kita memerlukan private key yang ada pada output Ganache di terminal Untuk Import Account yang ada di Ganache ini kita bisa klik Account 1 atau yang bagian atas yang paling tengah, lalu akan nanti akan muncul sebuah poppup dan pilih Import account Masukkan private key yang sudah di copy dari Ganache ke kolom berikut ini, lalu Import Tampilan jika berhasil melakukan import account"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "https://agilfchx.github.io/ardiasx/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Setup Ethernaut",
+      "item": "https://agilfchx.github.io/ardiasx/posts/setup-ethernaut/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Setup Ethernaut",
+  "name": "Setup Ethernaut",
+  "description": "Halo semuanya, jadi pada post pertama ini saya akan membagikan cara untuk setup Ethernaut secara lokal (Linux).\nJadi sebelum kita melakukan setup, saya akan membagikan beberapa versi tools dan software yang saya gunakan untuk bermain di Ethernaut yang dapat berjalan di lokal saya yaitu:\nNode.js v18.17.1 NPM v9.8.1 yarn git Steps Clone repo dan install dependencies git clone https://github.com/OpenZeppelin/ethernaut.git \u0026amp;\u0026amp; yarn install Setelah terinstall, jalankan ganache atau rpc servernya pada folder ethernaut yarn network Lanjut kita akan melakukan installasi Metamask sesuai browser yang digunakan Setelah Metamask terinstall, selanjutnya kita akan menambahkan network baru dengan klik pada bagian pojok kiri atas lalu klik Add Network dan setelah di klik pilih Add Network Manually Isi kolom yang kosong menjadi seperti berikut dan untuk Network name bebas diisi sesuai kemauan kalian Setelah itu kita akan memasukkan akun yang dari Ganache, jadi kita memerlukan private key yang ada pada output Ganache di terminal Untuk Import Account yang ada di Ganache ini kita bisa klik Account 1 atau yang bagian atas yang paling tengah, lalu akan nanti akan muncul sebuah poppup dan pilih Import account Masukkan private key yang sudah di copy dari Ganache ke kolom berikut ini, lalu Import Tampilan jika berhasil melakukan import account",
+  "keywords": [
+    "Ethernaut"
+  ],
+  "articleBody": "Halo semuanya, jadi pada post pertama ini saya akan membagikan cara untuk setup Ethernaut secara lokal (Linux).\nJadi sebelum kita melakukan setup, saya akan membagikan beberapa versi tools dan software yang saya gunakan untuk bermain di Ethernaut yang dapat berjalan di lokal saya yaitu:\nNode.js v18.17.1 NPM v9.8.1 yarn git Steps Clone repo dan install dependencies git clone https://github.com/OpenZeppelin/ethernaut.git \u0026\u0026 yarn install Setelah terinstall, jalankan ganache atau rpc servernya pada folder ethernaut yarn network Lanjut kita akan melakukan installasi Metamask sesuai browser yang digunakan Setelah Metamask terinstall, selanjutnya kita akan menambahkan network baru dengan klik pada bagian pojok kiri atas lalu klik Add Network dan setelah di klik pilih Add Network Manually Isi kolom yang kosong menjadi seperti berikut dan untuk Network name bebas diisi sesuai kemauan kalian Setelah itu kita akan memasukkan akun yang dari Ganache, jadi kita memerlukan private key yang ada pada output Ganache di terminal Untuk Import Account yang ada di Ganache ini kita bisa klik Account 1 atau yang bagian atas yang paling tengah, lalu akan nanti akan muncul sebuah poppup dan pilih Import account Masukkan private key yang sudah di copy dari Ganache ke kolom berikut ini, lalu Import Tampilan jika berhasil melakukan import account\nSetelah Metamask ready, kita akan pindah untuk melakukan deploy dan menjalankan servernya nanti. Tetapi sebelumnya kita pergi ke file client/src/constant.js untuk melakukan uncomment pada line 180 agar site nya bisa dijalankan menggunakan NETWORK.LOCAL Pindah lagi ke atas yaitu di line 16 yaitu url dari localhost menjadi http://127.0.0.1 Ini terjadi error karena gatau kenapa gabisa deploy pake localhost 🫤\nLangsung saja deploy contract dengan menjalankan perintah sebagai berikut yarn deploy:contracts Nanti akan muncul Confirm deployment dan bisa ketik y saja\nBerikut tampilan jika deploy contract berhasil\nSebelum menjalankan server/clientnya, kita perlu menambahkan dahulu pada file package.json di bagian script start dan buildnya (melanjutkan saja) karena terdapat error juga export SET NODE_OPTIONS=--openssl-legacy-provider \u0026\u0026 Baru kita bisa memulai server/client dengan menjalankna perintah berikut ini yarn start:ethernaut Jika kita baru menjalankan pertama kali maka nanti akan muncul popup dari Metamask seperti berikut untuk memilih akun yang telah kita import dari ganache agar bisa terhubung ke site Ethernaut lokal kita. Selanjutnya tinggal pilih Connect saja\nNanti jika sudah selesai maka akan muncul sebuah popup seperti berikut, cukup klik Deploy game Dan terakhir akan muncul sebuah popup dari Metamask untuk konfirmasi transaksinya Yep setelah itu kita tinggal memainkan level mana saja yang kita inginkan.\nSebenarnya setup seperti ini tidak efektif karena pasti bakal terjadi error. Jadi perlu diingat untuk memulai level ini kembali lakukan deploy kembali dan ganti account di Metamask menggunakan private key yang lain jangan sama seperti sebelumnya.\nMungkin segitu saja pada post pertama saya ini yaitu melakukan setup Ethernaut agar bisa dijalankan secara lokal.\nSemoga perjalanan saya untuk belajar Smart Contract Audit dan menyampaikan solusi dari game Ethernaut ini atau tulisan lainnya dapat membantu kalian 😁\nSee you next post 👋\n",
+  "wordCount" : "479",
+  "inLanguage": "en",
+  "datePublished": "2023-08-18T23:14:30+07:00",
+  "dateModified": "2023-08-18T23:14:30+07:00",
+  "author":{
+    "@type": "Person",
+    "name": "Ardias"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://agilfchx.github.io/ardiasx/posts/setup-ethernaut/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ardias",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://agilfchx.github.io/ardiasx/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://agilfchx.github.io/ardiasx" accesskey="h" title="Ardias (Alt + H)">
+                <img src="https://agilfchx.github.io/ardiasx/logo.png" alt="" aria-label="logo"
+                    height="35">Ardias</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://agilfchx.github.io/ardiasx/posts" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://agilfchx.github.io/ardiasx/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://agilfchx.github.io/ardiasx/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://agilfchx.github.io/ardiasx">Home</a>&nbsp;»&nbsp;<a href="https://agilfchx.github.io/ardiasx/posts/">Posts</a></div>
+    <h1 class="post-title">
+      Setup Ethernaut
+    </h1>
+    <div class="post-meta"><span title='2023-08-18 23:14:30 +0700 +0700'>August 18, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Ardias
+
+</div>
+  </header> 
+  <div class="post-content"><p>Halo semuanya, jadi pada post pertama ini saya akan membagikan cara untuk setup Ethernaut secara lokal (Linux).</p>
+<p>Jadi sebelum kita melakukan setup, saya akan membagikan beberapa versi tools dan software yang saya gunakan untuk bermain di Ethernaut yang dapat berjalan di lokal saya yaitu:</p>
+<ol>
+<li>Node.js v18.17.1</li>
+<li>NPM v9.8.1</li>
+<li>yarn</li>
+<li>git</li>
+</ol>
+<h2 id="steps">Steps<a hidden class="anchor" aria-hidden="true" href="#steps">#</a></h2>
+<ol>
+<li>Clone repo dan install dependencies</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/OpenZeppelin/ethernaut.git <span style="color:#f92672">&amp;&amp;</span> yarn install
+</span></span></code></pre></div><ol start="2">
+<li>Setelah terinstall, jalankan <code>ganache</code> atau rpc servernya pada folder <code>ethernaut</code></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yarn network
+</span></span></code></pre></div><figure class="align-center ">
+    <img loading="lazy" src="/ardias/images/20230818/yarn-network.png#center"/> 
+</figure>
+
+<ol start="3">
+<li>Lanjut kita akan melakukan installasi <code>Metamask</code> sesuai browser yang digunakan</li>
+<li>Setelah <code>Metamask</code> terinstall, selanjutnya kita akan menambahkan network baru dengan klik pada bagian pojok kiri atas lalu klik <code>Add Network</code> dan setelah di klik pilih <code>Add Network Manually</code></li>
+</ol>
+<figure class="align-center ">
+    <img loading="lazy" src="/ardias/images/20230818/add-network.png#center"/> 
+</figure>
+
+<ol start="5">
+<li>Isi kolom yang kosong menjadi seperti berikut dan untuk <code>Network name</code> bebas diisi sesuai kemauan kalian</li>
+</ol>
+<figure class="align-center ">
+    <img loading="lazy" src="/ardias/images/20230818/set-network.png#center"/> 
+</figure>
+
+<ol start="6">
+<li>Setelah itu kita akan memasukkan akun yang dari Ganache, jadi kita memerlukan private key yang ada pada output Ganache di terminal</li>
+</ol>
+<figure class="align-center ">
+    <img loading="lazy" src="/ardias/images/20230818/priv-key.png#center"/> 
+</figure>
+
+<ol start="7">
+<li>Untuk Import Account yang ada di Ganache ini kita bisa klik <code>Account 1</code> atau yang bagian atas yang paling tengah, lalu akan nanti akan muncul sebuah poppup dan pilih <code>Import account</code></li>
+</ol>
+<figure class="align-center ">
+    <img loading="lazy" src="/ardias/images/20230818/imp-acc.png#center"/> 
+</figure>
+
+<ol start="8">
+<li>Masukkan private key yang sudah di copy dari Ganache ke kolom berikut ini, lalu Import</li>
+</ol>
+<figure class="align-center ">
+    <img loading="lazy" src="/ardias/images/20230818/imp-priv.png#center"/> 
+</figure>
+
+<p>Tampilan jika berhasil melakukan import account</p>
+<figure class="align-center ">
+    <img loading="lazy" src="/ardias/images/20230818/success-imp.png#center"/> 
+</figure>
+
+<ol start="9">
+<li>Setelah <code>Metamask</code> ready, kita akan pindah untuk melakukan deploy dan menjalankan servernya nanti. Tetapi sebelumnya kita pergi ke file <code>client/src/constant.js</code> untuk melakukan uncomment pada <code>line 180</code> agar site nya bisa dijalankan menggunakan <code>NETWORK.LOCAL</code></li>
+</ol>
+<figure class="align-center ">
+    <img loading="lazy" src="/ardias/images/20230818/uncomment-180.png#center"/> 
+</figure>
+
+<ol start="10">
+<li>Pindah lagi ke atas yaitu di <code>line 16</code> yaitu <code>url</code> dari <code>localhost</code> menjadi <code>http://127.0.0.1</code></li>
+</ol>
+<figure class="align-center ">
+    <img loading="lazy" src="/ardias/images/20230818/change-url.png#center"/> 
+</figure>
+
+<blockquote>
+<p>Ini terjadi error karena gatau kenapa gabisa deploy pake <code>localhost</code> 🫤</p>
+</blockquote>
+<ol start="11">
+<li>Langsung saja deploy contract dengan menjalankan perintah sebagai berikut</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yarn deploy:contracts
+</span></span></code></pre></div><p>Nanti akan muncul <code>Confirm deployment</code> dan bisa ketik <code>y</code> saja</p>
+<figure class="align-center ">
+    <img loading="lazy" src="/ardias/images/20230818/conf-depl.png#center"/> 
+</figure>
+
+<p>Berikut tampilan jika deploy contract berhasil</p>
+<figure class="align-center ">
+    <img loading="lazy" src="/ardias/images/20230818/success-depl.png#center"/> 
+</figure>
+
+<ol start="12">
+<li>Sebelum menjalankan server/clientnya, kita perlu menambahkan dahulu pada file <code>package.json</code> di bagian script <code>start</code> dan <code>build</code>nya (melanjutkan saja) karena terdapat error juga</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#a6e22e">SET</span> <span style="color:#a6e22e">NODE_OPTIONS</span><span style="color:#f92672">=--</span><span style="color:#a6e22e">openssl</span><span style="color:#f92672">-</span><span style="color:#a6e22e">legacy</span><span style="color:#f92672">-</span><span style="color:#a6e22e">provider</span> <span style="color:#f92672">&amp;&amp;</span>
+</span></span></code></pre></div><figure class="align-center ">
+    <img loading="lazy" src="/ardias/images/20230818/change-pkg.png#center"/> 
+</figure>
+
+<ol start="13">
+<li>Baru kita bisa memulai server/client dengan menjalankna perintah berikut ini</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yarn start:ethernaut
+</span></span></code></pre></div><ol start="14">
+<li>Jika kita baru menjalankan pertama kali maka nanti akan muncul popup dari <code>Metamask</code> seperti berikut untuk memilih akun yang telah kita import dari ganache agar bisa terhubung ke site Ethernaut lokal kita.</li>
+</ol>
+<figure class="align-center ">
+    <img loading="lazy" src="/ardias/images/20230818/con-mt.png#center"/> 
+</figure>
+
+<p>Selanjutnya tinggal pilih <code>Connect</code> saja</p>
+<figure class="align-center ">
+    <img loading="lazy" src="/ardias/images/20230818/connect.png#center"/> 
+</figure>
+
+<ol start="15">
+<li>Nanti jika sudah selesai maka akan muncul sebuah popup seperti berikut, cukup klik <code>Deploy game</code></li>
+</ol>
+<figure class="align-center ">
+    <img loading="lazy" src="/ardias/images/20230818/deploy-game.png#center"/> 
+</figure>
+
+<ol start="16">
+<li>Dan terakhir akan muncul sebuah popup dari <code>Metamask</code> untuk konfirmasi transaksinya</li>
+</ol>
+<figure class="align-center ">
+    <img loading="lazy" src="/ardias/images/20230818/conf-mt.png#center"/> 
+</figure>
+
+<p>Yep setelah itu kita tinggal memainkan level mana saja yang kita inginkan.</p>
+<blockquote>
+<p>Sebenarnya setup seperti ini tidak efektif karena pasti bakal terjadi error. <strong>Jadi perlu diingat</strong> untuk memulai level ini kembali lakukan <strong>deploy kembali</strong> dan <strong>ganti account</strong> di Metamask menggunakan <strong>private key yang lain</strong> jangan sama seperti sebelumnya.</p>
+</blockquote>
+<p>Mungkin segitu saja pada post pertama saya ini yaitu melakukan setup Ethernaut agar bisa dijalankan secara lokal.</p>
+<p>Semoga perjalanan saya untuk belajar Smart Contract Audit dan menyampaikan solusi dari game Ethernaut ini atau tulisan lainnya dapat membantu kalian 😁</p>
+<p>See you next post 👋</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://agilfchx.github.io/ardiasx/tags/ethernaut/">Ethernaut</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://agilfchx.github.io/ardiasx">Ardias</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
