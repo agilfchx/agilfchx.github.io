@@ -1,0 +1,4 @@
+baseURL = 'https://agilfchx.github.io/ardias'
+languageCode = 'en-us'
+title = 'Ardias'
+theme = 'PaperMod'
