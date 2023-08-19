@@ -12,15 +12,15 @@ Kita akan melanjutkan series Ethernaut ini dan kita akan bermain di level 1 yait
 Pada level kali ini tidak seperti sebelumnya kita langsung diberikan sebuah source code smart contract nya untuk menyelesaikan level ini, berikut adalah source codenya
 // SPDX-License-Identifier: MIT pragma solidity ^0.8.0; contract Fallback { mapping(address =&gt; uint) public contributions; address public owner; constructor() { owner = msg.sender; contributions[msg.sender] = 1000 * (1 ether); } modifier onlyOwner { require( msg.">
 <meta name="author" content="Ardias">
-<link rel="canonical" href="https://agilfchx.github.io/ardiaswx/posts/level1-fallback/">
-<link crossorigin="anonymous" href="/ardiaswx/assets/css/stylesheet.5cfc680b1eeaeef9efbced92d46c2a9e876b72ee14fba85846afc4cff9e6e6f8.css" integrity="sha256-XPxoCx7q7vnvvO2S1Gwqnodrcu4U&#43;6hYRq/Ez/nm5vg=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/ardiaswx/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+<link rel="canonical" href="https://agilfchx.github.io/posts/level1-fallback/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.5cfc680b1eeaeef9efbced92d46c2a9e876b72ee14fba85846afc4cff9e6e6f8.css" integrity="sha256-XPxoCx7q7vnvvO2S1Gwqnodrcu4U&#43;6hYRq/Ez/nm5vg=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://agilfchx.github.io/ardiaswx/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://agilfchx.github.io/ardiaswx/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://agilfchx.github.io/ardiaswx/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://agilfchx.github.io/ardiaswx/apple-touch-icon.png">
-<link rel="mask-icon" href="https://agilfchx.github.io/ardiaswx/safari-pinned-tab.svg">
+<link rel="icon" href="https://agilfchx.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://agilfchx.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://agilfchx.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://agilfchx.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://agilfchx.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -65,7 +65,7 @@ Kita akan melanjutkan series Ethernaut ini dan kita akan bermain di level 1 yait
 Pada level kali ini tidak seperti sebelumnya kita langsung diberikan sebuah source code smart contract nya untuk menyelesaikan level ini, berikut adalah source codenya
 // SPDX-License-Identifier: MIT pragma solidity ^0.8.0; contract Fallback { mapping(address =&gt; uint) public contributions; address public owner; constructor() { owner = msg.sender; contributions[msg.sender] = 1000 * (1 ether); } modifier onlyOwner { require( msg." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://agilfchx.github.io/ardiaswx/posts/level1-fallback/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://agilfchx.github.io/posts/level1-fallback/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-08-18T23:14:53+07:00" />
 <meta property="article:modified_time" content="2023-08-18T23:14:53+07:00" />
 
@@ -81,18 +81,18 @@ Pada level kali ini tidak seperti sebelumnya kita langsung diberikan sebuah sour
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  "itemListElement": [, 
+  "itemListElement": [
     {
       "@type": "ListItem",
-      "position":  2 ,
+      "position":  1 ,
       "name": "Posts",
-      "item": "https://agilfchx.github.io/ardiaswx/posts/"
+      "item": "https://agilfchx.github.io/posts/"
     }, 
     {
       "@type": "ListItem",
-      "position":  3 ,
+      "position":  2 ,
       "name": "Level 1 - Fallback",
-      "item": "https://agilfchx.github.io/ardiaswx/posts/level1-fallback/"
+      "item": "https://agilfchx.github.io/posts/level1-fallback/"
     }
   ]
 }
@@ -118,14 +118,14 @@ Pada level kali ini tidak seperti sebelumnya kita langsung diberikan sebuah sour
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://agilfchx.github.io/ardiaswx/posts/level1-fallback/"
+    "@id": "https://agilfchx.github.io/posts/level1-fallback/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Ardias",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://agilfchx.github.io/ardiaswx/favicon.ico"
+      "url": "https://agilfchx.github.io/favicon.ico"
     }
   }
 }
@@ -147,8 +147,8 @@ Pada level kali ini tidak seperti sebelumnya kita langsung diberikan sebuah sour
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://agilfchx.github.io/ardiaswx" accesskey="h" title="Ardias (Alt + H)">
-                <img src="https://agilfchx.github.io/ardiaswx/logo.png" alt="" aria-label="logo"
+            <a href="https://agilfchx.github.io/" accesskey="h" title="Ardias (Alt + H)">
+                <img src="https://agilfchx.github.io/logo.png" alt="" aria-label="logo"
                     height="35">Ardias</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
@@ -175,17 +175,17 @@ Pada level kali ini tidak seperti sebelumnya kita langsung diberikan sebuah sour
         </div>
         <ul id="menu">
             <li>
-                <a href="https://agilfchx.github.io/ardiaswx/posts" title="Posts">
+                <a href="https://agilfchx.github.io/posts" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://agilfchx.github.io/ardiaswx/categories/" title="Categories">
+                <a href="https://agilfchx.github.io/categories/" title="Categories">
                     <span>Categories</span>
                 </a>
             </li>
             <li>
-                <a href="https://agilfchx.github.io/ardiaswx/tags/" title="Tags">
+                <a href="https://agilfchx.github.io/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
@@ -196,7 +196,7 @@ Pada level kali ini tidak seperti sebelumnya kita langsung diberikan sebuah sour
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://agilfchx.github.io/ardiaswx">Home</a>&nbsp;»&nbsp;<a href="https://agilfchx.github.io/ardiaswx/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://agilfchx.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://agilfchx.github.io/posts/">Posts</a></div>
     <h1 class="post-title">
       Level 1 - Fallback
     </h1>
@@ -323,7 +323,7 @@ Pada level kali ini tidak seperti sebelumnya kita langsung diberikan sebuah sour
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span>await <span style="color:#66d9ef">contract</span>.owner()
 </span></span></code></pre></div><p>Dan kita lihat bahwa address owner contract sekarang adalah <code>0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6</code></p>
 <figure class="align-center ">
-    <img loading="lazy" src="/ardiaswx/images/20230818/owner.png#center"/> <figcaption>
+    <img loading="lazy" src="/images/20230818/owner.png#center"/> <figcaption>
             Initial Owner Address
         </figcaption>
 </figure>
@@ -333,7 +333,7 @@ Pada level kali ini tidak seperti sebelumnya kita langsung diberikan sebuah sour
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span>await <span style="color:#66d9ef">contract</span>.contribute({ value<span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span> })
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// untuk value gunakan saja yang terendah, seperti diatas yaitu hanya 1 wei
 </span></span></span></code></pre></div><figure class="align-center ">
-    <img loading="lazy" src="/ardiaswx/images/20230818/contribute.png#center"/> <figcaption>
+    <img loading="lazy" src="/images/20230818/contribute.png#center"/> <figcaption>
             Running await contract.contribute() in console
         </figcaption>
 </figure>
@@ -341,7 +341,7 @@ Pada level kali ini tidak seperti sebelumnya kita langsung diberikan sebuah sour
 <p>Lalu kita cek dahulu apakah contribution kita sudah masuk atau belum dengan menjalankan perintah berikut</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span>await <span style="color:#66d9ef">contract</span>.getContribution().then(v <span style="color:#f92672">=&gt;</span> v.toString())
 </span></span></code></pre></div><figure class="align-center ">
-    <img loading="lazy" src="/ardiaswx/images/20230818/getcontribution.png#center"/> <figcaption>
+    <img loading="lazy" src="/images/20230818/getcontribution.png#center"/> <figcaption>
             Running await contract.getContribution() in console
         </figcaption>
 </figure>
@@ -349,14 +349,14 @@ Pada level kali ini tidak seperti sebelumnya kita langsung diberikan sebuah sour
 <p>Selanjutnya, untuk melakukan interaksi langsung ke <code>fallback</code> atau <code>receive</code> kita bisa menjalankan perintah berikut ini dan akan muncul popup metamask seperti biasa untuk konfirmasi</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span>await <span style="color:#66d9ef">contract</span>.sendTransaction({ <span style="color:#66d9ef">from</span><span style="color:#f92672">:</span> player, value<span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span> })
 </span></span></code></pre></div><figure class="align-center ">
-    <img loading="lazy" src="/ardiaswx/images/20230818/sendtransac.png#center"/> <figcaption>
+    <img loading="lazy" src="/images/20230818/sendtransac.png#center"/> <figcaption>
             Running await contract.sendTransaction() in console
         </figcaption>
 </figure>
 
 <p>Sekarang jika kita lihat owner contractnya sudah berubah sesuai dengan address yang kita miliiki</p>
 <figure class="align-center ">
-    <img loading="lazy" src="/ardiaswx/images/20230818/owner-final.png#center"/> <figcaption>
+    <img loading="lazy" src="/images/20230818/owner-final.png#center"/> <figcaption>
             Owner contract address changed to our address
         </figcaption>
 </figure>
@@ -364,7 +364,7 @@ Pada level kali ini tidak seperti sebelumnya kita langsung diberikan sebuah sour
 <p>Langkah terakhir adalah melakukan withdraw dengan menjalankan perintah berikut ini dan kalian bisa lihat balance kalian bertambah</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span>await <span style="color:#66d9ef">contract</span>.withdraw()
 </span></span></code></pre></div><figure class="align-center ">
-    <img loading="lazy" src="/ardiaswx/images/20230818/withdraw.png#center"/> <figcaption>
+    <img loading="lazy" src="/images/20230818/withdraw.png#center"/> <figcaption>
             Running await contract.withdraw() in console
         </figcaption>
 </figure>
@@ -378,14 +378,14 @@ Pada level kali ini tidak seperti sebelumnya kita langsung diberikan sebuah sour
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://agilfchx.github.io/ardiaswx/tags/ethernaut/">Ethernaut</a></li>
+      <li><a href="https://agilfchx.github.io/tags/ethernaut/">Ethernaut</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2023 <a href="https://agilfchx.github.io/ardiaswx">Ardias</a></span>
+    <span>&copy; 2023 <a href="https://agilfchx.github.io/">Ardias</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
