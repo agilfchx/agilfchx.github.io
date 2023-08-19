@@ -17,13 +17,13 @@ Di level ini kita akan diberitahu bagaimana cara bermain di Ethernaut, tanpa pan
 Untuk memulai kita klik `Get new instance` terlebih dahulu untuk memulai level ini. Nanti akan muncul sebuah pop up confirm transaction dari `Metamask` dan itu bisa langsung saja klik Confirm.
 
 > Jika terjadi error seperti berikut ini, coba import account menggunakan private key lain dan jangan lupa di connect an ke site nya
-> {{< figure align=center src="/ardiaswx/images/20230818/error1.png" >}}
+> {{< figure align=center src="/images/20230818/error1.png" >}}
 
 Setelah klik `Get new instance` maka tampilan nya akan berubah dan akan ada button `Submit instance`.
-{{< figure align=center src="/ardiaswx/images/20230818/submit-instance.png" >}}
+{{< figure align=center src="/images/20230818/submit-instance.png" >}}
 
 Kalau kita buka console dan ketikkan `ethernaut` lalu muncul object seperti berikut maka instance berhasil di buat
-{{< figure align=center src="/ardiaswx/images/20230818/object.png" >}}
+{{< figure align=center src="/images/20230818/object.png" >}}
 
 > Untuk melihat owner contract ethernaut yang dibuat / new instance yang tadi di klik bisa ketikkan
 >
@@ -34,55 +34,55 @@ Kalau kita buka console dan ketikkan `ethernaut` lalu muncul object seperti beri
 
 Lalu bagaimana untuk menyelesaikan level ini? Jadi jika kita perhatikan pada nomor 9 untuk berinteraksinya kita perlu mengetikkan method `await contract.info()` untuk menyelesaikan level ini.
 
-{{< figure align=center src="/ardiaswx/images/20230818/info.png" >}}
+{{< figure align=center src="/images/20230818/info.png" >}}
 
 Setelah menjalankan info ternyata diberi tahu kembali bahwa kita perlu mencari tahu di `info1()`. Pada `info1()` kita diberi tahu kembali bahwa disuruh mencoba `info2()` tetapi kita memerlukan parameter `"hello"`
 
-{{< figure align=center src="/ardiaswx/images/20230818/info1.png" >}}
+{{< figure align=center src="/images/20230818/info1.png" >}}
 
 Selanjutnya kita diberitahu bahwa terdapat property `infoNum` yang terdapat angka untuk `info` selanjutnya
 
-{{< figure align=center src="/ardiaswx/images/20230818/infonum.png" >}}
+{{< figure align=center src="/images/20230818/infonum.png" >}}
 
 Kita mendapatkan angka untuk mengakses `info` selanjutnya yaitu `info42`
 
-{{< figure align=center src="/ardiaswx/images/20230818/info42.png" >}}
+{{< figure align=center src="/images/20230818/info42.png" >}}
 
 Dari `info42` ini kita dapat informasi lagi bahwa selanjutnya ada di method `theMethodName()`
 
-{{< figure align=center src="/ardiaswx/images/20230818/themethod.png" >}}
+{{< figure align=center src="/images/20230818/themethod.png" >}}
 
 Disini kita mendapatkan method name lagi yaitu `method7123949()`
 
-{{< figure align=center src="/ardiaswx/images/20230818/method7123949.png" >}}
+{{< figure align=center src="/images/20230818/method7123949.png" >}}
 
 Selanjutnya kita perlu mencari tahu password untuk di submit ke function`authenticate()`
 
-{{< figure align=center src="/ardiaswx/images/20230818/pass-authenticate.png" >}}
+{{< figure align=center src="/images/20230818/pass-authenticate.png" >}}
 
 Jika kita perhatikan `abi` yang ada di contract dengan mengetikkan `contract` terdapat sebuah function menarik yaitu `password`
 
-{{< figure align=center src="/ardiaswx/images/20230818/contract-pass.png" >}}
+{{< figure align=center src="/images/20230818/contract-pass.png" >}}
 
 Setelah kita coba jalankan, kita mendapatkan password yaitu `ethernaut0`
 
-{{< figure align=center src="/ardiaswx/images/20230818/pass.png" >}}
+{{< figure align=center src="/images/20230818/pass.png" >}}
 
 Langsung saja kita selesaikan levelnya dengan memasukkan ke parameter function `authenticate()`
 
-{{< figure align=center src="/ardiaswx/images/20230818/auth.png" >}}
+{{< figure align=center src="/images/20230818/auth.png" >}}
 
 Nanti akan muncul sebuah popup Metamask lagi untuk Confirm transaksi dan jika berhasil pada console seperti berikut
 
-{{< figure align=center src="/ardiaswx/images/20230818/confirm.png" >}}
+{{< figure align=center src="/images/20230818/confirm.png" >}}
 
 Untuk cek apakah level 0 sudah clear bisa ketikkan
 
-{{< figure align=center src="/ardiaswx/images/20230818/check.png" >}}
+{{< figure align=center src="/images/20230818/check.png" >}}
 
 Dan pada tampilan klik button `Submit Instance`, setelah itu akan muncul popup confirm lagi. Tampilan akan menunjukkan Congratulations dan nanti akan muncul smart contract yang digunakan pada level ini
 
-{{< figure align=center src="/ardiaswx/images/20230818/submit.png" >}}
+{{< figure align=center src="/images/20230818/submit.png" >}}
 
 ```solidity
 // SPDX-License-Identifier: MIT

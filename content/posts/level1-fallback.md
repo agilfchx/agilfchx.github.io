@@ -160,7 +160,7 @@ await contract.owner()
 
 Dan kita lihat bahwa address owner contract sekarang adalah `0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6`
 
-{{< figure align=center src="/ardiaswx/images/20230818/owner.png" title="Initial Owner Address" >}}
+{{< figure align=center src="/images/20230818/owner.png" title="Initial Owner Address" >}}
 
 Selanjutnya, karena `receive()` memerlukan require salah satunya `contributions[msg.sender] > 0`
 
@@ -171,7 +171,7 @@ await contract.contribute({ value: 1 })
 // untuk value gunakan saja yang terendah, seperti diatas yaitu hanya 1 wei
 ```
 
-{{< figure align=center src="/ardiaswx/images/20230818/contribute.png" title="Running await contract.contribute() in console" >}}
+{{< figure align=center src="/images/20230818/contribute.png" title="Running await contract.contribute() in console" >}}
 
 Lalu kita cek dahulu apakah contribution kita sudah masuk atau belum dengan menjalankan perintah berikut
 
@@ -179,7 +179,7 @@ Lalu kita cek dahulu apakah contribution kita sudah masuk atau belum dengan menj
 await contract.getContribution().then(v => v.toString())
 ```
 
-{{< figure align=center src="/ardiaswx/images/20230818/getcontribution.png" title="Running await contract.getContribution() in console" >}}
+{{< figure align=center src="/images/20230818/getcontribution.png" title="Running await contract.getContribution() in console" >}}
 
 Selanjutnya, untuk melakukan interaksi langsung ke `fallback` atau `receive` kita bisa menjalankan perintah berikut ini dan akan muncul popup metamask seperti biasa untuk konfirmasi
 
@@ -187,11 +187,11 @@ Selanjutnya, untuk melakukan interaksi langsung ke `fallback` atau `receive` kit
 await contract.sendTransaction({ from: player, value: 1 })
 ```
 
-{{< figure align=center src="/ardiaswx/images/20230818/sendtransac.png" title="Running await contract.sendTransaction() in console" >}}
+{{< figure align=center src="/images/20230818/sendtransac.png" title="Running await contract.sendTransaction() in console" >}}
 
 Sekarang jika kita lihat owner contractnya sudah berubah sesuai dengan address yang kita miliiki
 
-{{< figure align=center src="/ardiaswx/images/20230818/owner-final.png" title="Owner contract address changed to our address" >}}
+{{< figure align=center src="/images/20230818/owner-final.png" title="Owner contract address changed to our address" >}}
 
 Langkah terakhir adalah melakukan withdraw dengan menjalankan perintah berikut ini dan kalian bisa lihat balance kalian bertambah
 
@@ -199,7 +199,7 @@ Langkah terakhir adalah melakukan withdraw dengan menjalankan perintah berikut i
 await contract.withdraw()
 ```
 
-{{< figure align=center src="/ardiaswx/images/20230818/withdraw.png" title="Running await contract.withdraw() in console" >}}
+{{< figure align=center src="/images/20230818/withdraw.png" title="Running await contract.withdraw() in console" >}}
 
 Setelah selesai lakukan `Submit Instance` dann level 1 pun selesai
 
