@@ -6,7 +6,18 @@
     <description>Recent content in Smart Contract Securiy on Ardias</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Aug 2023 23:14:53 +0700</lastBuildDate><atom:link href="https://agilfchx.github.io/categories/smart-contract-securiy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Aug 2023 22:22:43 +0700</lastBuildDate><atom:link href="https://agilfchx.github.io/categories/smart-contract-securiy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Level 2 - Fallout</title>
+      <link>https://agilfchx.github.io/posts/level2-fallout/</link>
+      <pubDate>Fri, 25 Aug 2023 22:22:43 +0700</pubDate>
+      
+      <guid>https://agilfchx.github.io/posts/level2-fallout/</guid>
+      <description>Haloo kita lanjutkan kembali series ethernaut ini di Level 2 yaitu Fallout, Lesgo!
+Pada level kali ini kita diberikan source code dari smart contractnya sebagai berikut
+// SPDX-License-Identifier: MIT pragma solidity ^0.6.0; import &amp;#39;openzeppelin-contracts-06/math/SafeMath.sol&amp;#39;; contract Fallout { using SafeMath for uint256; mapping (address =&amp;gt; uint) allocations; address payable public owner; /* constructor */ function Fal1out() public payable { owner = msg.sender; allocations[owner] = msg.value; } modifier onlyOwner { require( msg.sender == owner, &amp;#34;caller is not the owner&amp;#34; ); _; } function allocate() public payable { allocations[msg.</description>
+    </item>
+    
     <item>
       <title>Level 1 - Fallback</title>
       <link>https://agilfchx.github.io/posts/level1-fallback/</link>
