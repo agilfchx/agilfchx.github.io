@@ -135,6 +135,20 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2>Level 3 - Coin Flip
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Hai! Kembali lagi ke series belajar ethernaut, kita akan melanjutkan Level 3 yaitu Coin Flip. Lesgoo!
+Pada level kali ini kita diberikan source code seperti berikut
+// SPDX-License-Identifier: MIT pragma solidity ^0.8.0; contract CoinFlip { uint256 public consecutiveWins; uint256 lastHash; uint256 FACTOR = 57896044618658097711785492504343953926634992332820282019728792003956564819968; constructor() { consecutiveWins = 0; } function flip(bool _guess) public returns (bool) { uint256 blockValue = uint256(blockhash(block.number - 1)); if (lastHash == blockValue) { revert(); } lastHash = blockValue; uint256 coinFlip = blockValue / FACTOR; bool side = coinFlip == 1 ?...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-09-02 22:16:12 +0700 +0700'>September 2, 2023</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Ardias</footer>
+  <a class="entry-link" aria-label="post link to Level 3 - Coin Flip" href="https://agilfchx.github.io/posts/level3-coinflip/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2>Level 2 - Fallout
     </h2>
   </header>
