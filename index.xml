@@ -6,7 +6,19 @@
     <description>Recent content on Ardias</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Sep 2023 22:16:12 +0700</lastBuildDate><atom:link href="https://agilfchx.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Sep 2023 12:47:54 +0700</lastBuildDate><atom:link href="https://agilfchx.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Level 4 - Telephone</title>
+      <link>https://agilfchx.github.io/posts/level4-telephone/</link>
+      <pubDate>Sun, 10 Sep 2023 12:47:54 +0700</pubDate>
+      
+      <guid>https://agilfchx.github.io/posts/level4-telephone/</guid>
+      <description>Pada level kali ini kita diberikan source code smart contractnya seperti berikut
+// SPDX-License-Identifier: MIT pragma solidity ^0.8.0; contract Telephone { address public owner; constructor() { owner = msg.sender; } function changeOwner(address _owner) public { if (tx.origin != msg.sender) { owner = _owner; } } } Goals : Mendapatkan ownership dari contract level ini
+Breaking the code Pada smart contract ini hanya terdapat satu function saja yaitu changeOwner(_owner)
+function changeOwner(address _owner) public { if (tx.</description>
+    </item>
+    
     <item>
       <title>Level 3 - Coin Flip</title>
       <link>https://agilfchx.github.io/posts/level3-coinflip/</link>
